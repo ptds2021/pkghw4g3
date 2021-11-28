@@ -17,3 +17,24 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(pkghw4g3)
 ```
+
+## Goals 
+
+The goal of this package is to calculate a definite area. Then, we can plot the result.
+
+The main functions of this package are : 
+
+- estimate_area : This function calculate the area based on some constraints. It generates a number of points based on Uniform distribution (B parameter) 
+
+- plot.area : This function plots the results of our simulation. It draws the constraints and displays all the points.
+
+
+## Shiny App
+
+There is also a shiny application for the user; He/she can specify the paramters (B & seed) and see the visualization of our simulation. The application also displays the running time and the estimated area.  
+
+ 
+
+
+
+
