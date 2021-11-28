@@ -4,8 +4,8 @@
 #'@param B A \code{numeric} (integer) used to denote the number of simulations
 #'@param seed seed for reproducibility
 #'@return A\code{list} with estimate area and if the point is inside or outside the area
-#'@author Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
-#'@examples estimate_area(B = 100, 10)
+#'@authors Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
+#'@example estimate_area(B = 100, 10)
 estimate_area <- function(B = 5000, seed = 10) {
     if(is.numeric(B) == TRUE) {
         # set a seed
@@ -57,8 +57,8 @@ estimate_area <- function(B = 5000, seed = 10) {
 #'@export
 #'@param x
 #'@return A\code{graph}
-#'@author Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
-#'@examples plot.area(estimate_area(B= 5000))
+#'@authors Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
+#'@example plot.area(estimate_area(B= 5000))
 
 plot.area <- function(x) {
 
