@@ -12,9 +12,3 @@ A\code{graph}
 \description{
 help visualize the plot
 }
-\examples{
-plot.area(estimate_area(B= 5000))
-}
-\author{
-Enzo Beijer
-}
