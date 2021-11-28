@@ -18,7 +18,11 @@ Description: This package allows to obtain an approximation of the area of a sha
 License: MIT + file LICENSE
 Depends: R(>= 3.5.0)
 Imports: ggplot2, tidyverse, ggforce, shiny (>= 1.7.1)
-Suggests: utils
+Suggests: 
+    rmarkdown,
+    knitr,
+    utils
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
+VignetteBuilder: knitr

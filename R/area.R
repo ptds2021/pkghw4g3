@@ -60,15 +60,79 @@ estimate_area <- function(B = 5000, seed = 10) {
 #'@authors Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
 #'@example plot.area(estimate_area(B= 5000))
 plot.area <- function(x) {
-
     points <- x[["points"]]
+    # Function for third region line
+    fun1 <- function(x) {
+        x - 0.5
+    }
+    # First arc parameters
+    arc1 <- data.frame(
+        x0 = 0,
+        y0 = 0,
+        r = 0.5,
+        start = 0,
+        end = pi / 2
+    )
+
+    # Second arc parameters
+    arc2 <- data.frame(
+        x0 = 0.5,
+        y0 = 0.5,
+        r = 0.5,
+        start = -pi / 2,
+        end = pi / 2
+    )
+
 
     # plot points
     # Plot
     plot_ <- ggplot2::ggplot(points) +
         ggplot2::geom_point(mapping =ggplot2::aes(x = x, y = y),
                    col = ifelse(points[3] == TRUE, 'brown1', 'cadetblue1')) +
-        ggplot2::theme_bw() +
+        # Square
+        ggplot2::geom_rect(
+           ggplot2::aes(
+                xmin = 0,
+                xmax = 1,
+                ymin = 0,
+                ymax = 1
+            ),
+            fill = NA,
+            col = 'darkblue',
+            linetype = 'dashed'
+        ) +
+
+        # Line
+        ggplot2::stat_function(fun = fun1,
+                      col = 'darkblue') +
+
+        # First arc
+        ggforce::geom_arc(
+            data = arc1,
+            ggplot2::aes(
+                x0 = x0,
+                y0 = y0,
+                r = r,
+                start = start,
+                end = end
+            ),
+            col = 'darkblue'
+        ) +
+
+        # Second arc
+        ggforce::geom_arc(
+            data = arc2,
+            ggplot2::aes(
+                x0 = x0,
+                y0 = y0,
+                r = r,
+                start = start,
+                end = end
+            ),
+            col = 'darkblue'
+        ) +
+        ggplot2::coord_fixed(xlim = c(0, 1), ylim = c(0, 1)) +
+             ggplot2::theme_bw() +
         ggplot2::ggtitle('Problem 1: plot')
     print(plot_)
 }
