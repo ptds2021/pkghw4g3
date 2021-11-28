@@ -3,11 +3,18 @@ Type: Package
 Title: Estimate and plot
 Version: 0.1.0
 Authors@R: c(
-person("Enzo","Beijer", email="Enzo.Beijer@unil.ch", role=c("aut,"cre")),
-person("Sarah", "Ismail", role = "aut")))
+    person("Enzo","Beijer", role = c("aut", "cre")),
+    person("Sarah", "Ismail", role = "aut"),
+    person("Nada", "Abdulghafor", role = "aut"),
+    person("Waren", "Lugon", role = "aut"),
+    person("Labinot", "Ismaili", role = "aut")
+    )
 Maintainer: Enzo Beijer <Enzo.Beijer@unil.ch>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package allows to obtain an approximation of the area of a shape as well as to represent it. 
+    The estimate_area () function simulates the x and y coordinates of a point B and assigns the latter a value of "true" 
+    if the point is located in the line of the shape so inside the shape and "false" if it's not the case. 
+    The area of the shape is estimated by adding the points that had a "true" value, then dividing the whole by the total
+    number of points.Then the plot_area () function gets a value used to plot the shape as well as other points not belonging to the shape.
 License: GNU | LICENSE
 Depends: R(>= 3.5.0)
 Imports: ggplot2, tidyverse, ggforce, shiny (>= 1.7.1)
