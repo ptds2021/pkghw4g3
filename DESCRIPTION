@@ -1,0 +1,17 @@
+Package: pkghw4g3
+Type: Package
+Title: Estimate and plot
+Version: 0.1.0
+Authors@R: c(
+person("Enzo","Beijer", email="Enzo.Beijer@unil.ch", role=c("aut,"cre")),
+person("Sarah", "Ismail", role = "aut")))
+Maintainer: Enzo Beijer <Enzo.Beijer@unil.ch>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GNU | LICENSE
+Depends: R(>= 3.5.0)
+Imports: ggplot2, tidyverse, ggforce, shiny (>= 1.7.1)
+Suggests: utils
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
