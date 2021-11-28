@@ -17,9 +17,3 @@ A\code{list} with estimate area and if the point is inside or outside the area
 \description{
 Calculate the area of the square
 }
-\examples{
-estimate_area(B = 100, 10)
-}
-\author{
-Enzo Beijer
-}
