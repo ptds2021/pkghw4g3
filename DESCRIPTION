@@ -15,7 +15,7 @@ Description: This package allows to obtain an approximation of the area of a sha
     if the point is located in the line of the shape so inside the shape and "false" if it's not the case. 
     The area of the shape is estimated by adding the points that had a "true" value, then dividing the whole by the total
     number of points.Then the plot_area () function gets a value used to plot the shape as well as other points not belonging to the shape.
-License: GNU | LICENSE
+License: MIT + file LICENSE
 Depends: R(>= 3.5.0)
 Imports: ggplot2, tidyverse, ggforce, shiny (>= 1.7.1)
 Suggests: utils

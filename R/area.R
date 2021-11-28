@@ -1,4 +1,4 @@
-#' @title Estimate Area
+#'@title Estimate Area
 #'@description Calculate the area of the square
 #'@export
 #'@param B A \code{numeric} (integer) used to denote the number of simulations
@@ -52,14 +52,13 @@ estimate_area <- function(B = 5000, seed = 10) {
 
 }
 
-#' @title Plot Area
+#'@title Plot Area
 #'@description help visualize the plot
 #'@export
-#'@param x
+#'@param x value returning from the estimation of the area
 #'@return A\code{graph}
 #'@authors Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
 #'@example plot.area(estimate_area(B= 5000))
-
 plot.area <- function(x) {
 
     points <- x[["points"]]

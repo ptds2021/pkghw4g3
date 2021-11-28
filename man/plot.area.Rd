@@ -6,6 +6,9 @@
 \usage{
 \method{plot}{area}(x)
 }
+\arguments{
+\item{x}{value returning from the estimation of the area}
+}
 \value{
 A\code{graph}
 }
