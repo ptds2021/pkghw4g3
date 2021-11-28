@@ -7,9 +7,7 @@
 #'@author Enzo Beijer, Sarah Ismail, Waren Lugon, Labinot Ismaili, Nada Abdulghafor
 #'@examples estimate_area(B = 100, 10)
 estimate_area <- function(B = 5000, seed = 10) {
-
-    if(as.numeric(B >= 0)) {
-
+    if(is.numeric(B) == TRUE) {
         # set a seed
         set.seed(seed)
 
@@ -30,27 +28,28 @@ estimate_area <- function(B = 5000, seed = 10) {
                 Z[i] <- 1,
                 Z[i] <- 0
             )
-
+            ifelse(Z[i] == 1, points[i, 3] <- TRUE, points[i, 3] <- FALSE)
         }
 
+        # Estimated Area
+        estimated_area = sum(Z) / B
 
         # create a structure
         rval <- structure(
             list(
-                estimate_area = estimate_area,
+                estimated_area = estimated_area,
                 points = points),
             class = "area"
         )
 
         # return rval
         return(rval)
-
-
     } else {
 
         stop("B should be a number")  # add an error message
 
     }
+
 }
 
 #' @title Plot Area
